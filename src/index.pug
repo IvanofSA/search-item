@@ -1,0 +1,22 @@
+extends layout/template
+
+block vars
+
+block head
+	//+loadCSS('/css/promo.css')
+
+block content
+	.game
+		.game__video.js-video
+			.yt-video#yt-video
+
+		.game__map.js-map
+			.game__desc.js-desc Find all the<br/> hidden objects!
+			img(src='img/bg_ho.png').game__main
+			img(src='img/cover.png').game__cover
+			.game__var.js-var
+			ul.game__info.js-info
+
+
+block footer
+	script(src="/js/main.bundle.js")

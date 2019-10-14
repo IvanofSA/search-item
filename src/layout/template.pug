@@ -1,0 +1,28 @@
+block vars
+
+mixin loadCSS(url)
+	case ENV
+		when 'development'
+			//placeholder for generated css
+		default
+			link(rel="stylesheet", href=url)/
+
+
+doctype html
+html
+	head
+		meta(charset="UTF-8")/
+		meta(name="viewport", content="width=device-width")/
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")/
+		+loadCSS("/css/main.css")
+		//script(src="https://www.youtube.com/player_api")
+
+		title HTML Page
+
+		block head
+	body
+		.wrapper
+			.website
+				block content
+		block footer
+
